@@ -36,15 +36,47 @@ margin: 5px;
     padding: 20px;
     justify-content: center;
     border: var(--blk-solid);
+    
 }
 
-.header h1 {
-    grid-column: 1 / span 6;
+.header #animemoto {
+    grid-column: 1 / 4;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
 }
 .header nav {
-    grid-column: 7/span 6;
+    grid-column: 10/13;
     justify-self: end;
+    
 }
+.header .search-container {
+grid-column: 5/ 9;
+
+
+}
+
+.search-container input {
+    width: 20rem;
+    padding: 7px;
+    color: black;
+}
+.search-container button {
+        padding: 5px;
+        background:white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+}
+.header a {
+    color: blue;
+}
+
+.header a:hover {
+    color: red;
+}
+
+
 body {
     display:grid;
     font-family: Arial, Helvetica, sans-serif;
