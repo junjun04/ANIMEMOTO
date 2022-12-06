@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, sans-serif;
 }
 :root {
     --blk-solid: 5px black solid;
@@ -27,11 +27,31 @@ padding: 10px;
 }
 .aside1 {
     grid-area: aside1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+ 
 }
 
 .aside2 {
     grid-area: aside2;
+    display: grid;
+    grid-template-areas: 
+    'first'
+    'second';
+    grid-gap: 5px;
+    padding: 5px;
+    margin: 5px;
 }
+.aside2 > .first {
+    grid-area: first;
+}
+.aside2 >.second {
+    grid-area: second;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
 
 .aside3 {
     grid-area: aside3;
@@ -136,7 +156,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 5PX;
+    gap: 5px;
     border: 5px solid black;
 }
 form {
